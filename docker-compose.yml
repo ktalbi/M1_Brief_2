@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api/dockerfile
+    container_name: ml-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../mlruns:/app/mlruns     
+      - ../logs:/app/logs         
+    environment:
+      - MLFLOW_TRACKING_URI=file:/app/mlruns
+
+  app:
+    build:
+      context: ./app
+      dockerfile: dockerfile
+    container_name: ml-app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_URL_DEFAULT=http://api:8000 

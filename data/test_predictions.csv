@@ -1,0 +1,4 @@
+nom,prenom,age,taille,poids,sexe,sport_licence,niveau_etude,region,smoker,nationalité_francaise,revenu_estime_mois
+Marie,Zoé,57,163.7,56.3,F,oui,bac+2,Normandie,non,non,1369
+Dupont,Pierre,58,161.0,56.3,F,oui,bac+5,Normandie,non,non,2400
+

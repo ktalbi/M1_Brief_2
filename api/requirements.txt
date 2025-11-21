@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+loguru
+pandas
+numpy
+scikit-learn==1.6.1
+joblib
+mlflow
+tensorflow
+python-multipart 

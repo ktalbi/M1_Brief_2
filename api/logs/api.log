@@ -1,0 +1,19 @@
+2025-11-19 17:31:21.887 | WARNING  | main:_load_model_from_mlflow_uri:74 - Aucun fichier mlflow_model_uri.txt trouvé, pas de modèle à charger.
+2025-11-19 17:31:33.670 | INFO     | main:train_from_csv:135 - TRAIN X.shape = (2000, 25), X_train.shape = (1600, 25)
+2025-11-19 17:31:33.699 | INFO     | main:train_from_csv:142 - Début du run MLflow : 3208e54aa1704068af34e6d7e85c3918
+2025-11-19 17:31:42.393 | INFO     | main:train_from_csv:179 - Fin du run MLflow 3208e54aa1704068af34e6d7e85c3918, chargement du modèle : runs:/3208e54aa1704068af34e6d7e85c3918/mlflow_model
+2025-11-19 17:31:42.428 | INFO     | main:_save_model_uri:92 - URI du modèle MLflow sauvegardée dans models/mlflow_model_uri.txt
+2025-11-19 17:31:51.660 | INFO     | main:predict_from_csv:222 - PREDICT X.shape = (5, 25), model input_shape = (None, 25)
+2025-11-19 17:31:51.711 | INFO     | main:predict_from_csv:238 - Prédiction sur 5 lignes avec modèle version=3208e54aa1704068af34e6d7e85c3918
+2025-11-19 17:32:51.738 | INFO     | main:train_from_csv:135 - TRAIN X.shape = (2000, 25), X_train.shape = (1600, 25)
+2025-11-19 17:32:51.742 | INFO     | main:train_from_csv:142 - Début du run MLflow : 0d4adbfadb134de4b2b1dc97b20a9faf
+2025-11-19 17:32:59.693 | INFO     | main:train_from_csv:179 - Fin du run MLflow 0d4adbfadb134de4b2b1dc97b20a9faf, chargement du modèle : runs:/0d4adbfadb134de4b2b1dc97b20a9faf/mlflow_model
+2025-11-19 17:32:59.726 | INFO     | main:_save_model_uri:92 - URI du modèle MLflow sauvegardée dans models/mlflow_model_uri.txt
+2025-11-19 17:33:06.204 | INFO     | main:predict_from_csv:222 - PREDICT X.shape = (5, 25), model input_shape = (None, 25)
+2025-11-19 17:33:06.261 | INFO     | main:predict_from_csv:238 - Prédiction sur 5 lignes avec modèle version=0d4adbfadb134de4b2b1dc97b20a9faf
+2025-11-19 17:42:37.231 | INFO     | main:predict_from_csv:222 - PREDICT X.shape = (5, 25), model input_shape = (None, 25)
+2025-11-19 17:42:37.271 | INFO     | main:predict_from_csv:238 - Prédiction sur 5 lignes avec modèle version=0d4adbfadb134de4b2b1dc97b20a9faf
+2025-11-19 17:45:20.141 | WARNING  | main:predict_from_csv:247 - Erreur de validation du CSV : Colonnes manquantes dans le CSV : ['montant_pret']
+2025-11-19 18:08:51.343 | INFO     | main:_load_model_from_mlflow_uri:108 - Modèle chargé depuis MLflow : runs:/0d4adbfadb134de4b2b1dc97b20a9faf/mlflow_model
+2025-11-19 18:12:54.564 | INFO     | main:predict_from_csv:249 - PREDICT X.shape = (2, 25), model input_shape = (None, 25)
+2025-11-19 18:12:54.653 | INFO     | main:predict_from_csv:265 - Prédiction sur 2 lignes avec modèle version=0d4adbfadb134de4b2b1dc97b20a9faf
