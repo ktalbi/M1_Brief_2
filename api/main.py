@@ -59,9 +59,24 @@ _model = None
 _model_version = "none"  # run_id du modèle courant
 
 
-# -------------------------------------------------------------------
+MLFLOW_EXPERIMENT_NAME = os.getenv("MLFLOW_EXPERIMENT_NAME", "api_experiment")
+
 # Utilitaires
-# -------------------------------------------------------------------
+
+def _init_mlflow():
+    """
+    Initialise MLflow :
+    - tracking URI depuis MLFLOW_TRACKING_URI (ou file:./mlruns)
+    - experiment (créé si nécessaire)
+    """
+    tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "file:./mlruns")
+    logger.info(f"Configuration MLflow : TRACKING_URI={tracking_uri}, EXPERIMENT={MLFLOW_EXPERIMENT_NAME}")
+    mlflow.set_tracking_uri(tracking_uri)
+
+    # Crée ou sélectionne l’experiment
+    mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)
+    logger.info("MLflow initialisé.")
+
 
 def _check_columns_train(df: pd.DataFrame):
     """
@@ -132,6 +147,7 @@ def _save_model_uri(model_uri: str):
 
 
 # Chargement éventuel d’un modèle existant au démarrage
+_init_mlflow()
 _load_model_from_mlflow_uri()
 
 
